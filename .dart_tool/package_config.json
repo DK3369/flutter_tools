@@ -68,6 +68,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "convex_bottom_bar",
+      "rootUri": "file:///Users/duncan/development/flutter/.pub-cache/hosted/pub.dartlang.org/convex_bottom_bar-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "cross_file",
       "rootUri": "file:///Users/duncan/development/flutter/.pub-cache/hosted/pub.dartlang.org/cross_file-0.3.3+1",
       "packageUri": "lib/",
@@ -190,6 +196,12 @@
     {
       "name": "flutter_plugin_android_lifecycle",
       "rootUri": "file:///Users/duncan/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_screenutil",
+      "rootUri": "file:///Users/duncan/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_screenutil-5.5.3+2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -530,6 +542,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "pull_to_refresh",
+      "rootUri": "file:///Users/duncan/development/flutter/.pub-cache/hosted/pub.dartlang.org/pull_to_refresh-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "rxdart",
       "rootUri": "file:///Users/duncan/development/flutter/.pub-cache/hosted/pub.dartlang.org/rxdart-0.27.5",
       "packageUri": "lib/",
@@ -776,7 +794,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-07-30T04:59:00.290087Z",
+  "generated": "2022-08-18T13:24:13.091900Z",
   "generator": "pub",
-  "generatorVersion": "2.17.5"
+  "generatorVersion": "2.17.6"
 }

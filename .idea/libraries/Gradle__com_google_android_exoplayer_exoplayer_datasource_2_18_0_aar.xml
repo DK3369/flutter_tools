@@ -1,6 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.exoplayer:exoplayer-datasource:2.18.0@aar" type="AndroidModuleLibraryType">
-    <CLASSES />
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8e7ed7856c06357bf12956f976783317/transformed/jetified-exoplayer-datasource-2.18.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8e7ed7856c06357bf12956f976783317/transformed/jetified-exoplayer-datasource-2.18.0/jars/classes.jar!/" />
+    </CLASSES>
     <JAVADOC />
     <SOURCES />
   </library>

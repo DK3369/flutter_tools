@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: org.mockito:mockito-core:4.7.0" type="AndroidModuleLibraryType">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Gradle/gradle-7.5.1/caches/modules-2/files-2.1/org.mockito/mockito-core/4.7.0/5eeffd46d39ddd0c24666adaebc7ff62776642bd/mockito-core-4.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

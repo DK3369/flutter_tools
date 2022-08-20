@@ -9,6 +9,12 @@ abstract class Routes {
   static const NEWS = _Paths.NEWS;
   static const BOTTOM_NAVIGATION = _Paths.BOTTOM_NAVIGATION;
   static const MOVIES = _Paths.MOVIES;
+  static const TEST1 = _Paths.TEST1;
+  static const TEST2 = _Paths.TEST2;
+  static const TEST3 = _Paths.TEST3;
+  static const TEST4 = _Paths.TEST4;
+  static const TEST5 = _Paths.TEST5;
+  static const LOCAL_NOTIFICATIONS = _Paths.LOCAL_NOTIFICATIONS;
 }
 
 abstract class _Paths {
@@ -19,4 +25,10 @@ abstract class _Paths {
   static const NEWS = '/news';
   static const BOTTOM_NAVIGATION = '/bottom-navigation';
   static const MOVIES = '/movies';
+  static const TEST1 = '/test1';
+  static const TEST2 = '/test2';
+  static const TEST3 = '/test3';
+  static const TEST4 = '/test4';
+  static const TEST5 = '/test5';
+  static const LOCAL_NOTIFICATIONS = '/local-notifications';
 }

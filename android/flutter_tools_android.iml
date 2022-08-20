@@ -230,5 +230,19 @@
     <orderEntry type="library" name="Gradle: io.flutter:arm64_v8a_debug:1.0.0-e85ea0e79c6d894c120cda4ee8ee10fe6745e187" level="project" />
     <orderEntry type="library" name="Gradle: io.flutter:x86_64_debug:1.0.0-e85ea0e79c6d894c120cda4ee8ee10fe6745e187" level="project" />
     <orderEntry type="library" name="Gradle: io.flutter:x86_debug:1.0.0-e85ea0e79c6d894c120cda4ee8ee10fe6745e187" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-common:2.18.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-datasource:2.18.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-core:2.18.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-database:2.18.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-decoder:2.18.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-extractor:2.18.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-hls:2.18.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-dash:2.18.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-smoothstreaming:2.18.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: org.mockito:mockito-inline:4.7.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.mockito:mockito-core:4.7.0" level="project" />
+    <orderEntry type="library" name="Gradle: net.bytebuddy:byte-buddy:1.12.13" level="project" />
+    <orderEntry type="library" name="Gradle: net.bytebuddy:byte-buddy-agent:1.12.13" level="project" />
   </component>
 </module>

@@ -16,6 +16,7 @@ dependencies:
   device_info_plus: 4.0.0
   permission_handler: ^10.0.0
   lpinyin: ^2.0.3
+  sp_util: ^2.0.3
   image_picker: ^0.8.5+3
   url_launcher: 6.1.5
   flutter_widget_from_html: ^0.8.5
@@ -23,9 +24,38 @@ dependencies:
   flutter_screenutil: ^5.5.3+2
   # 下拉刷新
   pull_to_refresh: ^2.0.0
-#  下面的tabbar
+  #  下面的tabbar
   convex_bottom_bar: ^3.0.0
+  date_format: 2.0.6
 
+  oktoast: ^3.2.0
+
+  # 通知
+  flutter_local_notifications: ^9.8.0+1
+  # text动画
+  animated_text_kit: ^4.2.2
+
+#//connectivity_plus for checking wifi connection status
+  connectivity_plus: ^2.3.6+1
+#//network_info_plus
+  network_info_plus: ^2.1.4+1
+
+
+#  flutter_vpn: ^0.12.0
+  socks5: ^0.1.2
+  vpn_check: ^0.1.0
+#  flutter_openvpn: ^0.2.0
+
+
+  #  flutter_socks_proxy: ^0.0.2
+
+
+  flutter_native_timezone: ^2.0.0
+  http: ^0.13.4
+  image: ^3.0.8
+  path_provider: ^2.0.0
+  rxdart: ^0.27.2
+  shared_preferences: ^2.0.1
 
 
   flutter:
@@ -39,17 +69,13 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-
   flutter_lints: ^2.0.0
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
 
-# The following section is specific to Flutter packages.
+
 flutter:
-
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
+  assets:
+    - assets/images/
+    - assets/video/
+    - assets/data/
   uses-material-design: true
-

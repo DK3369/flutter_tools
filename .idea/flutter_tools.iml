@@ -108,11 +108,17 @@
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/just_audio/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/just_audio/build" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/just_audio/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/flutter_vpn/build" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/flutter_vpn/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/flutter_vpn/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/flutter_vpn/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/flutter_vpn/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/flutter_vpn/example/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Dart SDK" level="project" />
-    <orderEntry type="library" name="Dart Packages" level="project" />
     <orderEntry type="library" name="Flutter Plugins" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
   </component>
 </module>

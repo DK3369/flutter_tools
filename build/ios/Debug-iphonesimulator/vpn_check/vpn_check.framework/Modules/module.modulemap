@@ -1,0 +1,11 @@
+framework module vpn_check {
+  umbrella header "vpn_check-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module vpn_check.Swift {
+    header "vpn_check-Swift.h"
+    requires objc
+}

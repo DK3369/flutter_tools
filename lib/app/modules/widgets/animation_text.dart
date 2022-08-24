@@ -52,7 +52,8 @@ class _TextAnimationState extends State<TextAnimationPage> {
           Expanded(
             child: Container(
               alignment: Alignment.center,
-              child: Text('Taps: $_tapCount'),
+              // child: Text('Taps: $_tapCount'),
+              child: Text('Taps: $_index'),
             ),
           ),
         ],
@@ -61,7 +62,8 @@ class _TextAnimationState extends State<TextAnimationPage> {
         onPressed: () {
           setState(() {
             _index = ++_index % _examples.length;
-            _tapCount = 0;
+            // _tapCount = 0;
+            print(" $_tapCount  $_index");
           });
         },
         tooltip: 'Next',

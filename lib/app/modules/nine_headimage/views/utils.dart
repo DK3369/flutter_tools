@@ -29,6 +29,9 @@ class Utils {
       //return CachedNetworkImage(imageUrl: url, fit: BoxFit.cover);
       return Image.network(url, fit: BoxFit.cover);
     }
+    if (url.startsWith('assets/images/nine/')) {
+      return Image.asset(url, fit: BoxFit.cover);
+    }
     if (url.endsWith('.png')) {
       return Image.asset(url, fit: BoxFit.cover, package: 'flutter_gallery_assets');
     }
@@ -42,6 +45,9 @@ class Utils {
       //return Image(image: CachedNetworkImageProvider(url), fit: BoxFit.cover);
       return Image.network(url, fit: BoxFit.cover);
     }
+    if (url.startsWith('assets/images/nine/')) {
+      return Image.asset(url, fit: BoxFit.cover);
+    }
     if (url.endsWith('.png')) {
       return Image.asset(url, fit: BoxFit.cover, package: 'flutter_gallery_assets');
     }
@@ -53,7 +59,7 @@ class Utils {
   /// 图片搜索库
   static List<ImageBean> getTestData() {
     List<String> urlList = [
-      'ali_connors',
+      'assets/images/nine/ali_connors.png',
       'assets/images/nine/ali.png',
       'assets/images/nine/ali_landscape.png',
       'assets/images/nine/ali.png',

@@ -1,6 +1,8 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
+import 'marquee_flutter.dart';
+
 class TextAnimationPage extends StatefulWidget {
   const TextAnimationPage({Key? key}) : super(key: key);
 
@@ -38,7 +40,20 @@ class _TextAnimationState extends State<TextAnimationPage> {
       body: Column(
         children: <Widget>[
           Expanded(
-            child: Container(),
+            // child: Container(),
+            child: Container(
+              color: Colors.blueGrey,
+              height: 50,
+              child: MarqueeWidget(
+                height: 50,
+                text: "ListView即滚动列表控件，能将子控件组成可滚动的列表。当你需要排列的子控件超出容器大小",
+                textStyle: TextStyle(fontSize: 16.0),
+                scrollAxis: Axis.horizontal,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 50,
           ),
           Container(
             decoration: BoxDecoration(color: animatedTextExample.color),

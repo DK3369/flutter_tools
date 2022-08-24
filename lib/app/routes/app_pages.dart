@@ -26,6 +26,8 @@ import '../modules/movies/bindings/movies_binding.dart';
 import '../modules/movies/views/movies_view.dart';
 import '../modules/news/bindings/news_binding.dart';
 import '../modules/news/views/news_view.dart';
+import '../modules/nine_headimage/bindings/nine_headimage_binding.dart';
+import '../modules/nine_headimage/views/nine_headimage_view.dart';
 
 part 'app_routes.dart';
 
@@ -99,6 +101,11 @@ class AppPages {
       name: _Paths.LIST_MAIN,
       page: () => const ListMainView(),
       binding: ListMainBinding(),
+    ),
+    GetPage(
+      name: _Paths.NINE_HEADIMAGE,
+      page: () => const NineHeadimageView(),
+      binding: NineHeadimageBinding(),
     ),
   ];
 }

@@ -69,10 +69,6 @@ class NewsView extends GetView<NewsController> {
                   controller.testSocks5_2();
                 },
                 child: Text("调用testSocks5_2")),
-
-            // TextAnimationPage
-            // child: Text("调用IKEv2")),
-
             ElevatedButton(
                 onPressed: () {
                   print("调用 TextAnimationPage");
@@ -80,6 +76,13 @@ class NewsView extends GetView<NewsController> {
                       ?.then((value) => {});
                 },
                 child: Text("文字动画")),
+            ElevatedButton(
+                onPressed: () {
+                  print("调用 TextAnimationPage");
+                  Get.to(TextAnimationPage(), arguments: {"content": "content11", "dd": "tt"})
+                      ?.then((value) => {});
+                },
+                child: Text("九宫格，拖拽排序，群组头像")),
           ],
         ),
 

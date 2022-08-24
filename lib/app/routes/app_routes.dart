@@ -17,6 +17,7 @@ abstract class Routes {
   static const LOCAL_NOTIFICATIONS = _Paths.LOCAL_NOTIFICATIONS;
   static const LIST_VIEW_TEST = _Paths.LIST_VIEW_TEST;
   static const LIST_MAIN = _Paths.LIST_MAIN;
+  static const NINE_HEADIMAGE = _Paths.NINE_HEADIMAGE;
 }
 
 abstract class _Paths {
@@ -35,4 +36,5 @@ abstract class _Paths {
   static const LOCAL_NOTIFICATIONS = '/local-notifications';
   static const LIST_VIEW_TEST = '/list-view-test';
   static const LIST_MAIN = '/list-main';
+  static const NINE_HEADIMAGE = '/nine-headimage';
 }

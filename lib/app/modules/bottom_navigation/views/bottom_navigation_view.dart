@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tools/app/modules/home/views/home_view.dart';
+import 'package:flutter_tools/app/modules/list_main/views/list_main_view.dart';
 import 'package:flutter_tools/app/modules/mine/views/mine_view.dart';
 import 'package:flutter_tools/app/modules/movies/views/movies_view.dart';
 import 'package:flutter_tools/app/modules/news/views/news_view.dart';
@@ -22,6 +23,7 @@ class BottomNavigationView extends GetView<BottomNavigationController> {
                 HomeView(),
                 NewsView(),
                 MoviesView(),
+                ListMainView(),
                 MineView(),
               ],
             ),
@@ -42,12 +44,16 @@ class BottomNavigationView extends GetView<BottomNavigationController> {
                 label: '首页',
               ),
               _bottomNavigationBarItem(
-                icon: CupertinoIcons.sportscourt,
+                icon: CupertinoIcons.news,
                 label: '新闻',
               ),
               _bottomNavigationBarItem(
                 icon: CupertinoIcons.bell,
                 label: '视频',
+              ),
+              _bottomNavigationBarItem(
+                icon: CupertinoIcons.sportscourt,
+                label: '其他',
               ),
               _bottomNavigationBarItem(
                 icon: CupertinoIcons.person,

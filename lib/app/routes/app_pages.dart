@@ -14,6 +14,8 @@ import '../modules/bottom_navigation/bindings/bottom_navigation_binding.dart';
 import '../modules/bottom_navigation/views/bottom_navigation_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/list_main/bindings/list_main_binding.dart';
+import '../modules/list_main/views/list_main_view.dart';
 import '../modules/local_notifications/bindings/local_notifications_binding.dart';
 import '../modules/local_notifications/views/local_notifications_view.dart';
 import '../modules/login/bindings/login_binding.dart';
@@ -92,6 +94,11 @@ class AppPages {
       name: _Paths.LOCAL_NOTIFICATIONS,
       page: () => const LocalNotificationsView(),
       binding: LocalNotificationsBinding(),
+    ),
+    GetPage(
+      name: _Paths.LIST_MAIN,
+      page: () => const ListMainView(),
+      binding: ListMainBinding(),
     ),
   ];
 }

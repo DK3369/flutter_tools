@@ -39,6 +39,8 @@ dependencies:
   connectivity_plus: ^2.3.6+1
 #//network_info_plus
   network_info_plus: ^2.1.4+1
+  convert: ^3.0.2
+  crypto: ^3.0.2
 
 
 #  flutter_vpn: ^0.12.0
@@ -56,6 +58,12 @@ dependencies:
   path_provider: ^2.0.0
   rxdart: ^0.27.2
   shared_preferences: ^2.0.1
+
+
+
+  native_flutter_proxy: ^0.1.15
+  system_proxy: ^0.1.0
+
 
 
   flutter:

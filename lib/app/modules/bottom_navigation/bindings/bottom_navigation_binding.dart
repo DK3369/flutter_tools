@@ -10,11 +10,14 @@ class BottomNavigationBinding extends Bindings {
     Get.lazyPut<BottomNavigationController>(
       () => BottomNavigationController(),
     );
-    Get.lazyPut<NewsController>(
-      () => NewsController(),
-    );
-    Get.lazyPut<MoviesController>(
-      () => MoviesController(),
-    );
+    // Get.lazyPut<NewsController>(
+    //   () => NewsController(),
+    // );
+    Get.put(NewsController());
+    Get.put(MoviesController());
+
+    // Get.lazyPut<MoviesController>(
+    //   () => MoviesController(),
+    // );
   }
 }

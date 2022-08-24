@@ -63,8 +63,7 @@ class UpdateDialog {
           context: _context,
           barrierDismissible: false,
           builder: (BuildContext context) {
-            return WillPopScope(
-                onWillPop: () => Future<bool>.value(false), child: _widget);
+            return WillPopScope(onWillPop: () => Future<bool>.value(false), child: _widget);
           });
       _isShowing = true;
       return Future<bool>.value(true);
@@ -248,8 +247,7 @@ class _UpdateWidgetState extends State<UpdateWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final double dialogWidth =
-        widget.width <= 0 ? getFitWidth(context) * 0.618 : widget.width;
+    final double dialogWidth = widget.width <= 0 ? getFitWidth(context) * 0.618 : widget.width;
     return Material(
         type: MaterialType.transparency,
         child: Container(
@@ -262,14 +260,13 @@ class _UpdateWidgetState extends State<UpdateWidget> {
                 SizedBox(
                   width: dialogWidth,
                   child: widget.topImage ??
-                      Image.asset('assets/update_bg_app_top.png',
+                      Image.asset('assets/images/update_bg_app_top.png',
                           package: 'flutter_update_dialog', fit: BoxFit.fill),
                 ),
                 Container(
                   width: dialogWidth,
                   alignment: Alignment.center,
-                  padding: const EdgeInsets.only(
-                      left: 16, right: 16, top: 8, bottom: 8),
+                  padding: const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 8),
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
@@ -285,16 +282,13 @@ class _UpdateWidgetState extends State<UpdateWidget> {
                       Container(
                         padding: EdgeInsets.only(top: widget.extraHeight),
                         child: Text(widget.title,
-                            style: TextStyle(
-                                fontSize: widget.titleTextSize,
-                                color: Colors.black)),
+                            style: TextStyle(fontSize: widget.titleTextSize, color: Colors.black)),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 10),
                         child: Text(widget.updateContent,
                             style: TextStyle(
-                                fontSize: widget.contentTextSize,
-                                color: const Color(0xFF666666))),
+                                fontSize: widget.contentTextSize, color: const Color(0xFF666666))),
                       ),
                       if (widget.progress < 0)
                         Column(children: <Widget>[
@@ -305,15 +299,11 @@ class _UpdateWidgetState extends State<UpdateWidget> {
                                 tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                                 textStyle: MaterialStateProperty.all(
                                     TextStyle(fontSize: widget.buttonTextSize)),
-                                foregroundColor:
-                                    MaterialStateProperty.all(Colors.white),
+                                foregroundColor: MaterialStateProperty.all(Colors.white),
                                 shape: MaterialStateProperty.all(
-                                    RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(5))),
+                                    RoundedRectangleBorder(borderRadius: BorderRadius.circular(5))),
                                 elevation: MaterialStateProperty.all(0),
-                                backgroundColor: MaterialStateProperty.all(
-                                    widget.themeColor),
+                                backgroundColor: MaterialStateProperty.all(widget.themeColor),
                               ),
                               child: Text(widget.updateButtonText),
                               onPressed: widget.onUpdate,
@@ -324,17 +314,13 @@ class _UpdateWidgetState extends State<UpdateWidget> {
                                 widthFactor: 1,
                                 child: TextButton(
                                   style: ButtonStyle(
-                                    tapTargetSize:
-                                        MaterialTapTargetSize.shrinkWrap,
+                                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                                     textStyle: MaterialStateProperty.all(
-                                        TextStyle(
-                                            fontSize: widget.buttonTextSize)),
-                                    foregroundColor: MaterialStateProperty.all(
-                                        const Color(0xFF666666)),
-                                    shape: MaterialStateProperty.all(
-                                        RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(5))),
+                                        TextStyle(fontSize: widget.buttonTextSize)),
+                                    foregroundColor:
+                                        MaterialStateProperty.all(const Color(0xFF666666)),
+                                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(5))),
                                   ),
                                   child: Text(widget.ignoreButtonText),
                                   onPressed: widget.onIgnore,
@@ -356,14 +342,12 @@ class _UpdateWidgetState extends State<UpdateWidget> {
                     const SizedBox(
                         width: 1.5,
                         height: 50,
-                        child: DecoratedBox(
-                            decoration: BoxDecoration(color: Colors.white))),
+                        child: DecoratedBox(decoration: BoxDecoration(color: Colors.white))),
                     IconButton(
                       iconSize: 30,
-                      constraints:
-                          const BoxConstraints(maxHeight: 30, maxWidth: 30),
+                      constraints: const BoxConstraints(maxHeight: 30, maxWidth: 30),
                       padding: EdgeInsets.zero,
-                      icon: Image.asset('assets/update_ic_close.png',
+                      icon: Image.asset('assets/images/update_ic_close.png',
                           package: 'flutter_update_dialog'),
                       onPressed: widget.onClose,
                     )

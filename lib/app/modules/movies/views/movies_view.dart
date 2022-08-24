@@ -88,7 +88,7 @@ class MoviesView extends GetView<MoviesController> {
           titleTextSize: 14,
           contentTextSize: 12,
           buttonTextSize: 12,
-          topImage: Image.asset('assets/bg_update_top.png'),
+          topImage: Image.asset('assets/images/bg_update_top.png'),
           extraHeight: 5,
           radius: 8,
           themeColor: const Color(0xFFFFAC5D),
@@ -97,7 +97,8 @@ class MoviesView extends GetView<MoviesController> {
           updateButtonText: '升级',
           ignoreButtonText: '忽略此版本',
           enableIgnore: true, onIgnore: () {
-        ToastUtils.waring('忽略');
+        dialog?.dismiss();
+        // ToastUtils.waring('忽略');
         dialog!.dismiss();
       }, onUpdate: onUpdate);
     }

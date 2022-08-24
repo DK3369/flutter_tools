@@ -12,6 +12,23 @@ import 'package:vpn_check/vpn_check.dart';
 
 import 'flutter_socks_proxy/socks_proxy.dart';
 
+/// topic 前面加 jl1
+///  proxy -> "SOCKS5/SOCKS4/PROXY username:password@hots:port" or "DIRECT"
+var urlString = 'PROXY 152.32.186.236:38080';
+
+// var urlString = 'SOCKS5 34.92.245.49:36668';
+// var urlString = 'PROXY 34.92.245.49:36668';
+// var urlString = 'DIRECT 34.92.245.49:36668';
+
+// var urlIP = 'https://httpbin.org/ip';
+var urlIP = 'https://ifconfig.me';
+
+var httpClient = HttpClient();
+var directRequestURL = "https://ifconfig.me/ip";
+// var directRequestURL = 'https://httpbin.org/ip';
+
+var listOKIP = [];
+
 enum Season {
   SPRING('春天'),
   SUMMER('夏天'),
@@ -67,6 +84,24 @@ class Api {
     }
   }
 
+  static getMyIP() async {
+    String result;
+    try {
+      var request = await httpClient.getUrl(Uri.parse(urlIP));
+      var response = await request.close();
+      if (response.statusCode == HttpStatus.ok) {
+        var json = await response.transform(utf8.decoder).join();
+        var data = jsonDecode(json);
+        result = data['origin'];
+      } else {
+        result = 'Error getting IP address:\nHttp status ${response.statusCode}';
+      }
+    } catch (exception) {
+      result = 'Failed getting IP address $exception';
+    }
+    print("我的ip result = $result");
+  }
+
   /// 登陆接口
   /// 使用
   ///   Api.login({params}).then((value) {
@@ -74,109 +109,61 @@ class Api {
   ///     });
   ///
   static test1(params) async {
-    //   DioResponse result = await DioUtil()
-    //       .request(
-    //         URL.LOGIN,
-    //         method: DioMethod.post,
-    //         params: params,
-    //       )
-    //       .catchError((e) {});
-    //   if (result.data['code'] == '200') {
-    //     print("这里json 转model ，返回给controller model");
-    //     return result.data;
-    //   } else {
-    //     print("在这里处理各种异常、弹窗，尽量不要返回controller");
-    //   }
-    // }
+    getMyIP();
 
-    // 地址     : 49.157.15.130
-    // 端口     : 12581
-    // 密码     : 112211
-    // 加密     : aes-256-gcm
-    // 插件程序 : v2ray-plugin
-    // 插件选项 : host=cloudfront.com;path=/test1;mux=8
-    // ss://YWVzLTI1Ni1nY206MTEyMjEx@49.157.15.130:12581/?plugin=v2ray-plugin%3Bhost%3Dcloudfront.com%3Bpath%3D%2Ftest1%3Bmux%3D8
+    testSocks1(urlString);
+  }
 
-    // proxy socks -T ssh -P "10.8.20.46:22" -u user -D 123123 -t tcp -p ":28080"  --udp-port 0 --udp
-    // SocksProxy.initProxy(proxy: 'SOCKS5 10.8.20.46:12581');
-    SocksProxy.initProxy(proxy: 'SOCKS5 ss://YWVzLTI1Ni1nY206MTEyMjEx@10.8.20.46:12581');
+  static testSocks1(String urlString) async {
+    SocksProxy.initProxy(proxy: urlString);
+    await HttpClient().getUrl(Uri.parse(directRequestURL)).then((value) {
+      print("=========== value111 = $value");
+      listOKIP.add(urlString);
+      print("=========== listOKIP = $listOKIP");
+      return value.close();
+    }).then((value) {
+      print("=========== value222 = $value");
 
-    // SocksProxy.initProxy(proxy: 'SOCKS5 2:123123@10.8.20.46:12581');
-    print("1111");
-    await HttpClient()
-        .getUrl(
-            Uri.parse('https://raw.githubusercontent.com/tayoji-io/socks_proxy/master/README.md'))
-        .then((value) {
-          print("value111 = $value");
-          return value.close();
-        })
-        .then((value) {
-          print("value222 = $value");
+      return value.transform(utf8.decoder);
+    }).then((value) {
+      print("=========== value333 = $value");
 
-          return value.transform(utf8.decoder);
-        })
-        .then((value) {
-          print("value333 = $value");
+      return value.fold('', (dynamic previous, element) => previous + element);
+    }).then((value) {
+      print("=========== 11111 value = $value");
+      getMyIP();
+    }).catchError((e) => print("=========== e = $e"));
+  }
 
-          return value.fold('', (dynamic previous, element) => previous + element);
-        })
-        .then((value) => print(value))
-        .catchError((e) => print(e));
-    // SocksProxy.setProxy('SOCKS4 192.168.31.180:7891');
+  static testSocks(String urlString) async {
+    // proxy -> "SOCKS5/SOCKS4/PROXY username:password@host:port;" or "DIRECT"
+    final http = createProxyHttpClient()..findProxy = (url) => urlString;
 
-    // test('Independent test', () async {
-    //   // proxy -> "SOCKS5/SOCKS4/PROXY username:password@host:port;" or "DIRECT"
-    //   final http = createProxyHttpClient()..findProxy = (url) => 'SOCKS5 192.168.31.180:7891';
-    //   await http
-    //       .getUrl(
-    //       Uri.parse('https://raw.githubusercontent.com/tayoji-io/socks_proxy/master/README.md'))
-    //       .then((value) {
-    //     return value.close();
-    //   })
-    //       .then((value) {
-    //     return value.transform(utf8.decoder);
-    //   })
-    //       .then((value) {
-    //     return value.fold('', (dynamic previous, element) => previous + element);
-    //   })
-    //       .then((value) => print(value))
-    //       .catchError((e) => print(e));
-    // });
+    print("=========== http  = $http");
+
+    await http.getUrl(Uri.parse(directRequestURL)).then((value) {
+      print("value111 = $value");
+      return value.close();
+    }).then((value) {
+      print("value111 = $value");
+      return value.transform(utf8.decoder);
+    }).then((value) {
+      print("value111 = $value");
+      return value.fold('', (dynamic previous, element) => previous + element);
+    }).then((value) {
+      print("=========== 11111 value = $value");
+      getMyIP();
+    }).catchError((e) => print("eeee = $e"));
   }
 
   static testSocks5_2() async {
+    testSocks(urlString);
     print("testSocks5_2");
-
-    // /// [SOCKSSocket] uses a raw socket to authorize
-    // /// and request a connection, connect to your socks proxy server
-    // final sock = await RawSocket.connect(InternetAddress.loopbackIPv4, 9050);
-    //
-    // /// pass the socket to [SOCKSSocket]
-    // final proxy = SOCKSSocket(sock);
-    //
-    // /// request the proxy to connect to a host
-    // /// this call will throw exceptions if connection attempt fails from the proxy
-    // await proxy.connect("google.com:80");
-    //
-    // /// Now you can use the [sock] from earlier, since we can only listen
-    // /// once on a [RawSocket] we must set the [onData] function to intercept
-    // /// the events from the socket
-    // proxy.subscription.onData((RawSocketEvent event) {
-    //   /// [RawSocketEvent] messages are here
-    //   /// read from here..
-    //   if (event == RawSocketEvent.read) {
-    //     final data = sock.read(sock.available());
-    //     print("Got ${data?.length} bytes");
-    //   }
-    // });
-    //
-    // /// To connect with an [InternetAddress] use:
-    // /// await s.connectIp(InternetAddress.loopbackIPv4, 80);
-    //
-    // /// keepOpen=false will call close the [RawSocket]
-    // await proxy.close(keepOpen: false);
   }
 
+  /**
+   * 获取网络信息
+   * */
   static Future<void> initNetworkInfo() async {
     String _connectionStatus = 'Unknown';
     final NetworkInfo _networkInfo = NetworkInfo();

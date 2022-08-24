@@ -1,0 +1,11 @@
+framework module native_flutter_proxy {
+  umbrella header "native_flutter_proxy-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module native_flutter_proxy.Swift {
+    header "native_flutter_proxy-Swift.h"
+    requires objc
+}

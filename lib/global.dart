@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:sp_util/sp_util.dart';
 
 import 'app/utils/log_util.dart';
 
 /// 全局静态数据
 class Global {
+  var developType = "";
+
   static myLog(Object message, StackTrace current) {
     CustomTrace programInfo = CustomTrace(current);
     print("\n {文件: ${programInfo.fileName}, 行: ${programInfo.lineNumber}, 打印信息: $message}");
@@ -45,7 +46,7 @@ Future<void> initServices() async {
 
   ///这里是你放get_storage、hive、shared_pref初始化的地方。
   ///或者moor连接，或者其他什么异步的东西。
-  await SpUtil.getInstance();
+  // await SpUtil.getInstance();
   // await Get.putAsync(() => AuthService().init());
   // Get.put(AuthService().init());
   // await Get.putAsync(SettingsService()).init();

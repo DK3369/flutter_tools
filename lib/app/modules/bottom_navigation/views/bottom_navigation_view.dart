@@ -16,17 +16,15 @@ class BottomNavigationView extends GetView<BottomNavigationController> {
     return GetBuilder<BottomNavigationController>(
       builder: (controller) {
         return Scaffold(
-          body: SafeArea(
-            child: IndexedStack(
-              index: controller.tabIndex,
-              children: [
-                HomeView(),
-                NewsView(),
-                MoviesView(),
-                ListMainView(),
-                MineView(),
-              ],
-            ),
+          body: IndexedStack(
+            index: controller.tabIndex,
+            children: [
+              HomeView(),
+              NewsView(),
+              MoviesView(),
+              ListMainView(),
+              MineView(),
+            ],
           ),
           bottomNavigationBar: BottomNavigationBar(
             unselectedItemColor: Colors.black,

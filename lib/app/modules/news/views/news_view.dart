@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tools/app/modules/widgets/animation_text.dart';
+import 'package:flutter_tools/app/modules/widgets/story_list_view.dart';
 import 'package:get/get.dart';
 
 import '../../nine_headimage/views/nine_image_kind.dart';
@@ -84,6 +85,13 @@ class NewsView extends GetView<NewsController> {
                       ?.then((value) => {});
                 },
                 child: Text("九宫格，拖拽排序，群组头像")),
+            ElevatedButton(
+                onPressed: () {
+                  print("调用 九宫格 NineImageKind");
+                  Get.to(StoryListView(), arguments: {"content": "content11", "dd": "tt"})
+                      ?.then((value) => {});
+                },
+                child: Text("仿Facebook 首图缩小")),
           ],
         ),
 

@@ -52,6 +52,9 @@ dependencies:
 
   #  flutter_socks_proxy: ^0.0.2
 
+  #视频播放器  https://github.com/GeekyAnts/flick-video-player
+  flick_video_player: ^0.5.0
+
 
   flutter_native_timezone: ^2.0.0
   http: ^0.13.4

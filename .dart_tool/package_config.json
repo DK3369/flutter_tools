@@ -236,6 +236,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flick_video_player",
+      "rootUri": "file:///Users/duncan/development/flutter/.pub-cache/hosted/pub.dartlang.org/flick_video_player-0.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///Users/duncan/development/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -854,6 +860,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "universal_html",
+      "rootUri": "file:///Users/duncan/development/flutter/.pub-cache/hosted/pub.dartlang.org/universal_html-2.0.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "universal_io",
+      "rootUri": "file:///Users/duncan/development/flutter/.pub-cache/hosted/pub.dartlang.org/universal_io-2.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "url_launcher",
       "rootUri": "file:///Users/duncan/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-6.1.5",
       "packageUri": "lib/",
@@ -1028,7 +1046,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-08-24T10:14:28.114236Z",
+  "generated": "2022-08-24T10:45:53.920395Z",
   "generator": "pub",
   "generatorVersion": "2.17.6"
 }

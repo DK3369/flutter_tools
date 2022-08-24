@@ -10,7 +10,7 @@ environment:
 
 dependencies:
   get: 4.6.5
-  dio: ^4.0.0
+  dio: ^4.0.6
   dio_http2_adapter: ^2.0.0
   flutter_easyloading: ^3.0.5
   device_info_plus: 4.0.0
@@ -35,7 +35,6 @@ dependencies:
   # text动画
   animated_text_kit: ^4.2.2
 
-
 #//connectivity_plus for checking wifi connection status
   connectivity_plus: ^2.3.6+1
 #//network_info_plus
@@ -43,12 +42,13 @@ dependencies:
   convert: ^3.0.2
   crypto: ^3.0.2
 
+# 图片库 ？？？https://pixabay.com/images/search/sex/
+#  flutter_gallery_assets: ^1.0.2
 
 #  flutter_vpn: ^0.12.0
   socks5: ^0.1.2
   vpn_check: ^0.1.0
 #  flutter_openvpn: ^0.2.0
-
 
   #  flutter_socks_proxy: ^0.0.2
 
@@ -60,8 +60,6 @@ dependencies:
   rxdart: ^0.27.2
   shared_preferences: ^2.0.1
 
-
-
   native_flutter_proxy: ^0.1.15
   system_proxy: ^0.1.0
 
@@ -69,8 +67,6 @@ dependencies:
 
   flutter:
     sdk: flutter
-
-
 
   cupertino_icons: ^1.0.2
 
@@ -83,9 +79,19 @@ dev_dependencies:
 
 
 flutter:
+  uses-material-design: true
   assets:
     - assets/images/
-    - assets/images/nine
+    - assets/images/nine/
     - assets/video/
     - assets/data/
-  uses-material-design: true
+#    - packages/flutter_gallery_assets/people/ali_landscape.png
+#    - packages/flutter_gallery_assets/people/square/ali.png
+#    - packages/flutter_gallery_assets/people/square/peter.png
+#    - packages/flutter_gallery_assets/people/square/sandra.png
+#    - packages/flutter_gallery_assets/people/square/stella.png
+#    - packages/flutter_gallery_assets/people/square/trevor.png
+#    - packages/flutter_gallery_assets/places/india_tanjore_bronze_works.png
+#    - packages/flutter_gallery_assets/places/india_tanjore_market_merchant.png
+#    - packages/flutter_gallery_assets/places/india_tanjore_thanjavur_temple_carvings.png
+

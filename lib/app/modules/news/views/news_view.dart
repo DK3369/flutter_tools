@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tools/app/modules/widgets/animation_text.dart';
 import 'package:get/get.dart';
 
+import '../../nine_headimage/views/nine_image_kind.dart';
 import '../controllers/news_controller.dart';
 
 class NewsView extends GetView<NewsController> {
@@ -78,8 +79,8 @@ class NewsView extends GetView<NewsController> {
                 child: Text("文字动画")),
             ElevatedButton(
                 onPressed: () {
-                  print("调用 TextAnimationPage");
-                  Get.to(TextAnimationPage(), arguments: {"content": "content11", "dd": "tt"})
+                  print("调用 九宫格 NineImageKind");
+                  Get.to(NineImageKind(), arguments: {"content": "content11", "dd": "tt"})
                       ?.then((value) => {});
                 },
                 child: Text("九宫格，拖拽排序，群组头像")),

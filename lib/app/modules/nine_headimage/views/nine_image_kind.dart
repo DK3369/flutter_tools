@@ -16,25 +16,6 @@ class NineImageKind extends StatefulWidget {
 }
 
 class _NineImageKindState extends State<NineImageKind> {
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   String _title = 'QQ Group';
 
   NineGridType _gridType = NineGridType.qqGp;

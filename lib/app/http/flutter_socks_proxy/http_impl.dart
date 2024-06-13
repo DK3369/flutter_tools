@@ -3068,8 +3068,9 @@ class _HttpClient implements HttpClient {
       Platform.environment;
 }
 
-class _HttpConnection extends LinkedListEntry<_HttpConnection>
-    with _ServiceObject {
+@override
+final class _HttpConnection extends LinkedListEntry<_HttpConnection>
+    implements _ServiceObject {
   static const _ACTIVE = 0;
   static const _IDLE = 1;
   static const _CLOSING = 2;
@@ -3087,7 +3088,7 @@ class _HttpConnection extends LinkedListEntry<_HttpConnection>
   bool _idleMark = false;
   Future? _streamFuture;
 
-  _HttpConnection(this._socket, this._httpServer)
+   _HttpConnection(this._socket, this._httpServer)
       : _httpParser = _HttpParser.requestParser() {
     _connections[_serviceId] = this;
     _httpParser.listenToStream(_socket);
@@ -3224,6 +3225,23 @@ class _HttpConnection extends LinkedListEntry<_HttpConnection>
         break;
     }
     return r;
+  }
+
+  @override
+  int __serviceId;
+
+  @override
+  // TODO: implement _serviceId
+  int get _serviceId => throw UnimplementedError();
+
+  @override
+  // TODO: implement _servicePath
+  String get _servicePath => throw UnimplementedError();
+
+  @override
+  String _serviceType(bool ref) {
+    // TODO: implement _serviceType
+    throw UnimplementedError();
   }
 }
 
@@ -3853,7 +3871,7 @@ abstract class _HttpClientCredentials implements HttpClientCredentials {
 }
 
 class _HttpClientBasicCredentials extends _HttpClientCredentials
-    implements HttpClientBasicCredentials {
+    {
   String username;
   String password;
 
@@ -3882,7 +3900,7 @@ class _HttpClientBasicCredentials extends _HttpClientCredentials
 }
 
 class _HttpClientDigestCredentials extends _HttpClientCredentials
-    implements HttpClientDigestCredentials {
+    {
   String username;
   String password;
 
